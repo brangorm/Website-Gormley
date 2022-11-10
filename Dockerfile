@@ -11,11 +11,12 @@ RUN mkdir -p /home/node/app/ && chown -R node:node /home/node/app
 
 USER node
 
-COPY package.json /home/node/app
-COPY app.js /home/node/app
+WORKDIR /home/node/app
+
+COPY * /home/node/app
 
 RUN npm install
 
 EXPOSE 8080
 
-CMD [ "home/node/app/node", "home/node/app/app.js" ]
+CMD [ "node", "app.js" ]
