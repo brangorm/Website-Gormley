@@ -14,6 +14,7 @@ USER node
 WORKDIR /home/node/app
 
 COPY package.json /.
+COPY app.js /home/node/app
 
 RUN npm install
 
