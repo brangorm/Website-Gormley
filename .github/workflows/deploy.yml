@@ -15,5 +15,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-              cd cd ../../../../../../../../pub/bgormley/Website-Gormley
+              cd ../../../../../../../../pub/bgormley/Website-Gormley
               git pull
